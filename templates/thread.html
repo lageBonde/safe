@@ -1,0 +1,77 @@
+<style>
+	div.user {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		color: #FFF;
+		font-weight: 900;
+	}
+	div.user:before {
+		content: "Username: ";
+	}
+	
+	
+	table.threads {
+		border-collapse: collapse;
+		width: 100%;
+	}
+	
+	table.threads td {
+		border: 0px solid black;
+		border-bottom: 30px solid #FFF;
+		padding: 10px;
+	}
+	table.threads td:first-child {
+		width: 30%;
+		background-color: #F55;
+	}
+	
+	/*--------------*/
+	table.comment {
+		background-color: #F22;
+		width: 100%;
+		padding: 30px;
+	}
+	
+	.comment select { width: 300px; }
+	
+</style>
+<script>
+	function checkbox() {
+		box = document.getElementById('public');
+		select = document.getElementById('select');
+		if (box.checked == false) {
+			select.removeAttribute('disabled');
+		} else {
+			select.disabled = true;
+		}
+	}
+</script>
+
+{{ threads | safe }}
+
+
+<form active="./thread?post={{ post }}" method="post">
+	<table class="comment">
+		<tr>
+			<td>
+				<h2>Type here:</h2>
+				<label for="comment">Text:</label><br>
+				<textarea id="comment" name="comment" cols="50" style="resize:vertical;" required></textarea><br>
+			</td>
+			<td>
+				<input type="checkbox" name="public" id="public" onclick="checkbox()" checked />
+				<label for="public">Allow everyone to show this thread</label><br>
+	
+				<select id="select" name="select" multiple disabled="false" width="200px" size="3">
+					{{ options | safe }}
+				</select>
+			</td>
+		</tr>
+	<tr>
+		<td>
+			<input type="submit" value="Send Comment" />
+		</td>
+	</tr>
+	</table>
+</form>

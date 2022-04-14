@@ -1,0 +1,63 @@
+<style>
+	div.user {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		color: #FFF;
+		font-weight: 900;
+	}
+	div.user:before {
+		content: "Username: ";
+	}
+	
+	
+	.search {
+		border-collapse: collapse;
+		width: 100%;
+	}
+	
+	.search td {
+		border: 2px solid black;
+		padding: 20px;
+	}
+	
+	.add {
+		text-decoration: none;
+		color: #000;
+		
+		background-color: #F00;
+		border-radius: 7px;
+		padding: 5px;
+		margin: 10px;
+	}
+	.add:hover {
+		background-color: #A00;
+	}
+</style>
+
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<h1>Student safe room</h1>
+<p>Welcome to Student Safe Room's application!</p>
+<p>We have created this project for students to talk about mental health openly and try our best to find a solution to help. We ourselves are students so we know how difficult school can be and how much of an impact it can have on pupils mental health. With the use of technology we can find a solution.</p>
+
+<hr>
+<a href="newThread" class="add"><i class="fa fa-plus"></i> Add discussion</a>
+<br><br>
+<form active="search" method="get">
+	<label for="search">Search for post threads:</label>
+	<input type="text" name="search" id="search" placeholder="Search..." />
+	<input type="submit" />
+</form>
+
+<!--
+To do:
+------
+*	Not having duplications of names
+	Confortable with phone/tablet
+*	Choose which people can read/write
+	Design thread
+*	Login/out
+-->
