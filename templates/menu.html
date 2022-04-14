@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<style>
+	* {
+		font-family: Arial;
+	}
+	
+	
+	.menu {
+		position: fixed;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		
+		background-color: #F00;
+		
+		padding: 30px;
+		padding-bottom: 0px;
+	}
+	
+	.menu a {
+		padding: 30px;
+		
+		text-decoration: none;
+		font-size: 20px;
+		color: #FFF;
+		
+		/*background-color: #F00*/
+	}
+	.menu a:hover {
+		background-color: #A00;
+	}
+	
+	
+	
+	
+	.login {
+		padding: 30px;
+		
+		color: #FFF;
+		font-weight: bold;
+	}
+	
+	
+	
+	
+	
+	
+	
+	footer {
+		display: none;
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		
+		padding: 20px;
+	}
+</style>
+
+<div class="menu">
+	<a href="./">Home</a>
+	<a href="./resources">Resources</a>
+	<a href="./contact">Contact</a>
+	
+	<form class="login" active="./changeusername" method="post"> <!-- {{ script_root }} -->
+		<label for="user">Username:</label>
+		<input type="text" name="user" id="user"/>
+		
+		<br><label for="user">Password:</label>
+		<input type="password" name="pass" id="pass"/>
+		
+		<input type="submit" value="Sign in/up" />
+		<a href="./?logout=yes">Logout</a>
+	</form>
+</div>
+<div style="margin: 230px;"></div>
+
+
+
+<footer>
+	This website was created by Student Safe Room from the student program <a href="https://www.nyas.org/programs/global-stem-alliance/the-junior-academy/">Junior Academy</a>.
+</footer>
